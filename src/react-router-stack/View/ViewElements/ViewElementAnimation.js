@@ -19,7 +19,7 @@ export const ViewElementAnimation = styled(ViewElementTemplate)`
     }
 
     &.active {
-      z-index: 3;
+      z-index: 0;
     }
 
     &.enter-done {
