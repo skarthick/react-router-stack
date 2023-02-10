@@ -208,7 +208,11 @@ export function useLocationHistory(routerContext) {
   }, [items, history, location]);
 
   useLayoutEffect(() => {
-    window.sessionStorage.setItem(LOCATION_STORAGE_NS, JsonStringify(items));
+    try{
+       window.sessionStorage.setItem(_constants.LOCATION_STORAGE_NS, JsonStringify(items));
+      }catch(e){
+        console.log(e);
+      }
   }, [items]);
 
   return {
