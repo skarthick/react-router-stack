@@ -25,7 +25,7 @@ export function useTransitionHandlers() {
 
   const onEnter = useCallback(
     node => {
-      if (active) node.removeAttribute('hidden');
+      if (active) node?.removeAttribute('hidden');
       if (history.action === POP) {
         const state = locationHistory.get(routeMatch.key);
         if (state?.scrollTop) node.scrollTop = state.scrollTop;
