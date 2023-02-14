@@ -38,7 +38,7 @@ export function useTransitionHandlers() {
 
   const onEntered = useCallback(
     node => {
-      if (active) node.removeAttribute('hidden');
+      if (active) node?.removeAttribute('hidden');
     },
     [active]
   );
